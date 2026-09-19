@@ -459,3 +459,15 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   .app-shell .workspace { padding-top: 52px; padding-bottom: 60px; }
   .app-shell .section-header h2 { font-size: 32px; }
 }
+
+/* Volume body content */
+.app-shell .task-body { display: grid; gap: 5px; margin-top: 9px; padding-left: 2px; }
+.app-shell .task-body-label { color: var(--terracotta-dark); font: 8px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .09em; }
+.app-shell .task-body-item { display: flex; align-items: center; gap: 7px; color: var(--ink-soft); font-size: 10px; line-height: 1.35; }
+.app-shell .body-check { width: 11px; height: 11px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line-strong); color: var(--paper-bright); flex: 0 0 auto; }
+.app-shell .task-card.completed .body-check { border-color: var(--terracotta); background: var(--terracotta); }
+.app-shell .task-card.completed .task-body-item { color: var(--ink-faint); text-decoration: line-through; text-decoration-color: var(--line-strong); }
+@media (max-width: 700px) {
+  .app-shell .task-body-item { font-size: 9px; }
+  .app-shell .task-body { margin-top: 8px; }
+}

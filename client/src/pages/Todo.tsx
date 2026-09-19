@@ -29,6 +29,7 @@ type PriorityFilter = "all" | Priority;
 type Task = {
   id: string;
   title: string;
+  details?: string[];
   priority: Priority;
   completed: boolean;
   createdAt: number;
@@ -40,28 +41,32 @@ const STORAGE_KEY = "focuslist.tasks.v1";
 const starterTasks: Task[] = [
   {
     id: "starter-1",
-    title: "Review the product brief and mark open questions",
+    title: "Grocery shopping",
+    details: ["Pick up seasonal fruit", "Restock pantry staples", "Choose something for Sunday breakfast"],
     priority: "high",
     completed: false,
     createdAt: Date.now() - 1000 * 60 * 45,
   },
   {
     id: "starter-2",
-    title: "Send the revised onboarding copy to the team",
+    title: "Finish the Q3 presentation",
+    details: ["Tighten the opening slide", "Add the final metrics", "Export a review copy"],
     priority: "medium",
     completed: false,
     createdAt: Date.now() - 1000 * 60 * 90,
   },
   {
     id: "starter-3",
-    title: "Block thirty minutes for a walk between calls",
+    title: "Make space for a walk",
+    details: ["Block thirty minutes", "Leave the phone behind"],
     priority: "low",
     completed: true,
     createdAt: Date.now() - 1000 * 60 * 130,
   },
   {
     id: "starter-4",
-    title: "Book Friday's weekly planning session",
+    title: "Book Friday's planning session",
+    details: ["Add a short agenda", "Invite the team"],
     priority: "medium",
     completed: false,
     createdAt: Date.now() - 1000 * 60 * 180,
@@ -187,6 +192,7 @@ export default function Home() {
       {
         id: createId(),
         title: cleanTitle,
+        details: ["Add the supporting details inside this volume"],
         priority,
         completed: false,
         createdAt: Date.now(),
@@ -446,6 +452,17 @@ export default function Home() {
                   ) : (
                     <div className="task-content">
                       <div className="task-title-row"><h3>{task.title}</h3><span className={`priority-badge ${task.priority}`}><span className={`priority-marker ${task.priority}`} />{priorityMeta[task.priority].label}</span></div>
+                      {task.details && task.details.length > 0 && (
+                        <div className="task-body" aria-label={`Inside ${task.title}`}>
+                          <span className="task-body-label">inside the volume</span>
+                          {task.details.map((detail, detailIndex) => (
+                            <span className="task-body-item" key={`${task.id}-detail-${detailIndex}`}>
+                              <span className="body-check" aria-hidden="true">{task.completed && <Check size={9} />}</span>
+                              <span>{detail}</span>
+                            </span>
+                          ))}
+                        </div>
+                      )}
                       <div className="task-meta"><span>{formatAdded(task.createdAt)}</span><span className="meta-divider" /> <span>{task.completed ? "Closed volume" : priorityMeta[task.priority].note}</span></div>
                     </div>
                   )}
