@@ -1,8 +1,36 @@
 # FocusList
 
+> A quiet place for the next useful thing.
+
+[![Live demo](https://img.shields.io/badge/Live%20Demo-Open%20FocusList-c87046?style=for-the-badge)](https://focuslist-lvkwqf3x.manus.space)
+[![Frontend only](https://img.shields.io/badge/Architecture-Frontend--only-201f1c?style=flat-square)](https://github.com/Vishalkumaran2007/FrontendArena)
+[![Built with React](https://img.shields.io/badge/Built%20with-React%2019-61dafb?style=flat-square)](https://react.dev/)
+
 FocusList is a frontend-only daily task manager designed around the idea of a quiet working shelf. Task titles act as volume headings, while supporting checklist details appear as the inner content of each volume.
 
-The project is built with React, TypeScript, Vite, and Tailwind CSS. It uses browser local storage for persistence and does not require a backend, account, external database, or API.
+**Try the live experience:** [Open FocusList](https://focuslist-lvkwqf3x.manus.space) · [Open the Todo workspace directly](https://focuslist-lvkwqf3x.manus.space/todo)
+
+## Contents
+
+- [Live demo](#live-demo)
+- [Experience](#experience)
+- [Interactive tour](#interactive-tour)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Getting started](#getting-started)
+- [Project structure](#project-structure)
+- [Data model](#data-model)
+- [Persistence notes](#persistence-notes)
+- [Design reference](#design-reference)
+
+## Live demo
+
+| Page | What to explore |
+|---|---|
+| [FocusList home](https://focuslist-lvkwqf3x.manus.space) | Editorial introduction, product principles, responsive preview, and entry points into the task workspace. |
+| [Todo workspace](https://focuslist-lvkwqf3x.manus.space/todo) | Create, complete, edit, delete, search, filter, and persist daily tasks. |
+
+The live demo stores task data in your browser. No account or sign-in is required.
 
 ## Experience
 
@@ -12,6 +40,17 @@ FocusList is split into two routes:
 - **Todo page (`/todo`)** — the complete task shelf with creation, completion, editing, deletion, search, filters, statistics, and persistence.
 
 The visual system uses a literary serif display face, compact monospace metadata, warm terracotta accents, neutral paper tones, layered cards, and dense editorial spacing inspired by working-volume interfaces.
+
+## Interactive tour
+
+1. **Start at the shelf:** Open the [Todo workspace](https://focuslist-lvkwqf3x.manus.space/todo).
+2. **Create a volume:** Enter a title such as `Grocery shopping`, choose a priority, and press **Add task**.
+3. **Give it an inner page:** Starter volumes demonstrate how supporting checklist details sit beneath the main task heading.
+4. **Shape the day:** Click a priority in the left rail or use the status and priority filters.
+5. **Find a volume:** Search by title and watch the shelf update as you type.
+6. **Move it forward:** Use the circular control to mark a task complete or active.
+7. **Edit or remove it:** Use the pencil or trash controls on any task row.
+8. **Refresh the page:** Tasks remain available because the app persists them in browser local storage.
 
 ## Features
 
@@ -105,7 +144,7 @@ Data is stored locally in the current browser and origin. It is not synchronized
 
 ## Design reference
 
-The interface uses the supplied ThreeUI Complete Shelf page as a visual reference for editorial composition, typography, working-volume metaphors, warm accent color, layered depth, and responsive rhythm. The project does not embed or depend on the ThreeUI source bundle.
+The interface uses the supplied [ThreeUI Complete Shelf page](https://threeui.com/hero/complete-shelf-landing-page) as a visual reference for editorial composition, typography, working-volume metaphors, warm accent color, layered depth, and responsive rhythm. The project does not embed or depend on the ThreeUI source bundle.
 
 ## License
 
