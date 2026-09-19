@@ -404,3 +404,58 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   .art-card-foot { font-size: 8px; }
   .principles-intro h2, .rhythm-panel h2 { font-size: 41px; }
 }
+
+/* Compact Todo reference refinement */
+.app-shell .hero { padding-top: 72px; padding-bottom: 55px; gap: 58px; }
+.app-shell .hero h1 { font-size: clamp(48px, 5.7vw, 72px); }
+.app-shell .hero-description { margin-top: 21px; margin-bottom: 18px; font-size: 12px; line-height: 1.6; max-width: 390px; }
+.app-shell .eyebrow { margin-bottom: 14px; }
+.app-shell .focus-card { min-height: 192px; padding: 20px 21px 16px; }
+.app-shell .focus-card-main { margin: 22px 0 19px; gap: 16px; }
+.app-shell .progress-ring { width: 72px; height: 72px; }
+.app-shell .progress-ring-inner { width: 60px; height: 60px; }
+.app-shell .progress-ring strong { font-size: 17px; }
+.app-shell .focus-card h2 { font-size: 20px; }
+.app-shell .focus-card-copy > p:last-child { font-size: 9px; }
+.app-shell .stats-grid { }
+.app-shell .stat-card { min-height: 112px; padding: 18px 23px 19px; }
+.app-shell .stat-value { font-size: 34px; margin-top: 10px; }
+.app-shell .stat-card p { font-size: 9px; margin-top: 6px; }
+.app-shell .workspace { padding-top: 56px; padding-bottom: 48px; gap: 47px; grid-template-columns: 215px minmax(0, 1fr); }
+.app-shell .priority-rail h2 { font-size: 31px; }
+.app-shell .rail-intro { font-size: 10px; line-height: 1.55; margin: 13px 0 23px; }
+.app-shell .breakdown-row { padding: 10px 0; grid-template-columns: 9px 52px 1fr 18px; }
+.app-shell .rail-note { margin-top: 20px; font-size: 9px; }
+.app-shell .section-header { margin-bottom: 18px; }
+.app-shell .section-header h2 { font-size: 34px; }
+.app-shell .composer { min-height: 48px; }
+.app-shell .composer-input-wrap { padding: 0 12px; }
+.app-shell .composer input { font-size: 11px; }
+.app-shell .composer-actions { gap: 8px; padding-right: 7px; }
+.app-shell .add-button { min-height: 33px; padding: 0 11px; font-size: 9px; }
+.app-shell .select-wrap select { font-size: 9px; }
+.app-shell .controls-row { margin: 17px 0 11px; }
+.app-shell .search-wrap, .app-shell .priority-filter-wrap { height: 32px; }
+.app-shell .filter-tabs button { padding: 8px 10px; font-size: 9px; }
+.app-shell .task-card { min-height: 64px; padding: 12px 2px 12px 0; gap: 12px; }
+.app-shell .task-title-row h3 { font-size: 11px; }
+.app-shell .task-meta { margin-top: 5px; font-size: 8px; }
+.app-shell .priority-badge { padding: 4px 6px; font-size: 8px; }
+.app-shell .list-footer { padding-top: 11px; font-size: 8px; }
+.app-shell .footer { padding-top: 15px; padding-bottom: 23px; font-size: 8px; }
+
+@media (max-width: 900px) {
+  .app-shell .hero { gap: 36px; }
+  .app-shell .workspace { gap: 33px; grid-template-columns: 190px minmax(0, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .app-shell .hero { padding-top: 58px; padding-bottom: 42px; }
+  .app-shell .hero h1 { font-size: clamp(47px, 14vw, 68px); }
+  .app-shell .hero-description { font-size: 12px; }
+  .app-shell .focus-card { min-height: 192px; }
+  .app-shell .stats-grid { grid-template-columns: 1fr; }
+  .app-shell .stat-card { min-height: 0; padding: 15px 17px; }
+  .app-shell .workspace { padding-top: 52px; padding-bottom: 60px; }
+  .app-shell .section-header h2 { font-size: 32px; }
+}
